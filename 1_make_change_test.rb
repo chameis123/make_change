@@ -4,7 +4,7 @@ require_relative "make_change.rb"
   class Test_change <minitest::Test_coin
 
 
-  	  	test_pass_0_cents_returns_
+  	test_pass_0_cents_returns_
   	result = get_change(0)
   		assert_equals({0}, result)
 
@@ -21,12 +21,12 @@ require_relative "make_change.rb"
   		assert_equals({penny: 3}, result)
 
 
-  		  	test_pass_5_cents_returns_5
+    test_pass_5_cents_returns_5
   	result = get_change(5)
   		assert_equals({nickel: 1}, result)
 
 
-  		  	test_pass_6_cents_returns_6
+  	test_pass_6_cents_returns_6
   	result = get_change(6)
   		assert_equals({nickel: 1, penny: 1}, result)
 
@@ -35,7 +35,7 @@ require_relative "make_change.rb"
   	result = get_change(10)
   		assert_equals({dime: 1}, result)
 
-  		  		  	test_pass_16_cents_returns_16
+  	test_pass_16_cents_returns_16
   	result = get_change(16)
   		assert_equals({dime: 1,nickel: 1, penny:1}, result)
 
@@ -53,8 +53,14 @@ require_relative "make_change.rb"
   	result = get_change(61)
   		assert_equals({quarter: 2,dime:1,penny: 1}, result)
 
-     test_pass_66_cents_returns_66
+    test_pass_66_cents_returns_66
   	result = get_change(66)
   		assert_equals({quarter: 2,dime:1,nickel: 1,penny: 1}, result)
+
+    test_pass_67_cents_returns_67
+  	result = get_change(67)
+  		assert_equals({quarter: 2,dime:1,nickel: 1,penny: 2}, result)
+
+
 
 end   

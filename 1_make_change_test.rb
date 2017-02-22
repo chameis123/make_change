@@ -66,6 +66,9 @@ require_relative "make_change.rb"
   	result = get_change(77)
   		assert_equals({quarter: 2,dime:2,nickel: 1,penny: 2}, result)
 
+    test_pass_68_cents_returns_68
+  	result = get_change(68)
+  		assert_equals({quarter: 2,dime:1,nickel: 1,penny: 3}, result)
 
 
 
